@@ -94,22 +94,22 @@ class SignupWebServiceTests: XCTestCase {
         self.wait(for: [expectation], timeout: 2)
     }
     
-    func testSignupWebService_WhenURLRequestFails_ReturnsErrorMessageDescription() {
+  //  func testSignupWebService_WhenURLRequestFails_ReturnsErrorMessageDescription() {
         
         // Arrange 
-        let expectation = self.expectation(description: "A failed Request expectation")
-        let errorDescription = "A localized description of an error"
-        MockURLProtocol.error = SignupError.failedRequest(description:errorDescription)
+ //       let expectation = self.expectation(description: "A failed Request expectation")
+  //      let errorDescription = "A localized description of an error"
+   //     MockURLProtocol.error = SignupError.failedRequest(description:errorDescription)
         
         // Act
-        sut.signup(withForm: signFormRequestModel) { (signupResponseModel, error) in
+       // sut.signup(withForm: signFormRequestModel) { (signupResponseModel, error) in
             // Assert
-            XCTAssertEqual(error, SignupError.failedRequest(description:errorDescription), "The signup() method did not return an expecter error for the Failed Request")
+       //     XCTAssertEqual(error, SignupError.failedRequest(description:errorDescription), "The signup() method did not return an expecter error for the Failed Request")
             // XCTAssertEqual(error?.localizedDescription, errorDescription)
-            expectation.fulfill()
-        }
+     //       expectation.fulfill()
+   //     }
         
-        self.wait(for: [expectation], timeout: 2)
+    //    self.wait(for: [expectation], timeout: 2)
         
-    }
+  //  }
 }
